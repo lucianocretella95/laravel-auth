@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController; //<---- Import del controller precedentemente creato!
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,7 @@ use App\Http\Controllers\Admin\DashboardController; //<---- Import del controlle
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::resource("projects", ProjectController::class);
 
 Route::get('/', function () {
     return view('welcome');
