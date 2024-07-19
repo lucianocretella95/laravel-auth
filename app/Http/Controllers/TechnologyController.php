@@ -12,7 +12,11 @@ class TechnologyController extends Controller
      */
     public function index()
     {
-        //
+        $technology = Technology::all();
+        $data = [
+            "tech" => $technology
+            // ADD RETURN
+        ];
     }
 
     /**

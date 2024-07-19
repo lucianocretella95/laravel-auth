@@ -17,7 +17,8 @@ class ProjectController extends Controller
         $data = [
             "progetti" => $projects
         ];
-        return view('admin.project', $data);
+        // return view('admin.project', $data);
+        // CORREGGERE IL RETURN
     }
 
     /**

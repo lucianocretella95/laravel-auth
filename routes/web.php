@@ -17,8 +17,8 @@ use App\Models\Technology;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource("projects", ProjectController::class);
-Route::resource("technology", TechnologyController::class);
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,6 +33,8 @@ Route::middleware(['auth'])
         // - il percorso "/" diventa "admin/"
         // - il nome della rotta ->name("dashboard") diventa ->name("admin.dashboard")
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+        Route::resource("projects", ProjectController::class);
+        Route::resource("technology", TechnologyController::class);
     });
 
 require __DIR__ . '/auth.php';
