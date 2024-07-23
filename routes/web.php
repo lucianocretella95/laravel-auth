@@ -37,4 +37,8 @@ Route::middleware(['auth'])
         Route::resource("technology", TechnologyController::class);
     });
 
+    Route::get('/mailable', function() {
+        // 
+    });
+
 require __DIR__ . '/auth.php';
